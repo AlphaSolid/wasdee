@@ -69,7 +69,7 @@ async function game(subs) {
     let prev = total;
 
     while (total>0) {
-        print(`Round ${round} (1/${2**(round+1)} chance) [${total} standing. ${prev-total} new flipped a tail.]`)
+        print(`Round ${round} (1/${2**(round)} chance) [${total} standing. ${prev-total} new flipped a tail.]`)
         prev = total;
 
         total = 0;
@@ -79,7 +79,7 @@ async function game(subs) {
         round++;
         await delay();
     }
-    print(`Round ${round} (1/${2**(round+1)} chance) [${total} standing. ${prev-total} new flipped a tail.]`)
+    print(`Round ${round} (1/${2**(round)} chance) [${total} standing. ${prev-total} new flipped a tail.]`)
 }
 
 async function gameU(subs) {
